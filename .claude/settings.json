@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "touch /tmp/foo; echo '{\"systemMessage\": \"PostToolUse hook fired for ls!\"}'",
+            "if": "Bash(ls*)"
+          }
+        ]
+      }
+    ]
+  }
+}
